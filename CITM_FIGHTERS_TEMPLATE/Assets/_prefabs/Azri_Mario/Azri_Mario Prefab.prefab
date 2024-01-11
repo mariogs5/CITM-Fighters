@@ -194,7 +194,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -210,5 +210,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0238b7fd6212d2448340f30bf2329d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveLimits: {x: -5, y: 5}
-  SafetyDistance: 1
+  MoveLimits: {x: -6, y: 6}
+  _animator: {fileID: 0}

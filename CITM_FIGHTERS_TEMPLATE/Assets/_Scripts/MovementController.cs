@@ -6,22 +6,12 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     [SerializeField]
-    Vector2 MoveLimits=new Vector2(-5,5);
+    Vector2 MoveLimits = new Vector2(-5, 5);
 
     [SerializeField]
-    float SafetyDistance=0.5f;
-    // Start is called before the first frame update
-   
 
-    
 
-    #region AnimationParamNames
-    const string SPEED = "Speed";
-    const string ATTACK_HIGH_QUICK = "AttackHighQuick";
-    const string DIE = "Die";
-    const string WIN = "Win";
 
-    #endregion
 
     private Animator _animator;
     private Transform _otherPlayer;
@@ -40,20 +30,26 @@ public class MovementController : MonoBehaviour
         _otherPlayer = other;
     }
 
-    
+
     public void TryMove(float speed)
     {
-        
 
-        if (CanMove(speed))
-        {       
-            _animator.SetFloat(SPEED, _id == 1 ? -speed : speed);
+        if (CanMove(speed) && speed != 0f)
+        {
+            float directionSpeed = _id == 1 ? -speed : speed;
+
+            _animator.SetInteger(PlayerController.SPEED, speed > 0f ? 1 : -1);
+
+            float deltaSpeed = directionSpeed * Time.deltaTime;
+
+            Vector3 pos = transform.position;
+            pos.x += deltaSpeed;
+            transform.position = pos;
         }
-            
         else
-            _animator.SetFloat(SPEED, 0);
-
-
+        {
+            _animator.SetInteger(PlayerController.SPEED, 0);
+        }
     }
 
     public void LateUpdate()
@@ -75,30 +71,14 @@ public class MovementController : MonoBehaviour
 
     bool CanMoveLeft()
     {
-        if (transform.position.x <= MoveLimits.x)
-            return false;
-
-        if (_otherPlayer == null)
-            return true;
-
-        if (_id == 1 && transform.position.x <= (_otherPlayer.position.x + SafetyDistance))
-            return false;
-
         return true;
     }
     bool CanMoveRight()
     {
-        if (transform.position.x >= MoveLimits.y)
-            return false;
-
-        if (_otherPlayer == null)
-            return true;
-
-        if (_id == 0 && transform.position.x >= (_otherPlayer.position.x - SafetyDistance))
-            return false;
 
         return true;
+
     }
 
-  
+
 }

@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
 
     #region AnimationParamNames
-    const string SPEED = "Speed";
+    public const string SPEED = "Speed";
     const string ATTACK_HIGH_QUICK = "AttackHighQuick";
     const string ATTACK_HIGH_SLOW = "AttackHighSlow";
     const string ATTACK_LOW_QUICK = "AttackLowQuick";

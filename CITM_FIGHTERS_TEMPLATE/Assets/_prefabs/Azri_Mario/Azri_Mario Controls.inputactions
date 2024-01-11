@@ -163,7 +163,7 @@
                 {
                     "name": "",
                     "id": "25be2083-1666-4251-9a9b-3b7c33761ef0",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/o",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -196,7 +196,7 @@
                 {
                     "name": "negative",
                     "id": "c20bf137-a907-4b38-84dd-50dabf5f5852",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -207,7 +207,7 @@
                 {
                     "name": "positive",
                     "id": "7fa815b8-d759-4381-b836-c6e8b981b941",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -229,7 +229,7 @@
                 {
                     "name": "",
                     "id": "4795715b-8c6f-43cc-a2ee-be40ce7b9c41",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -251,7 +251,7 @@
                 {
                     "name": "",
                     "id": "a361c3cb-34ef-497e-bc1a-c96f42ddd96a",
-                    "path": "<Keyboard>/rightCtrl",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
