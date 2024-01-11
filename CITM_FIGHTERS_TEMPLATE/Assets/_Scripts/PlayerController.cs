@@ -110,12 +110,14 @@ public class PlayerController : MonoBehaviour
     public void OnHit(Transform hit)
     {
         var hitBy = hit.root.GetComponent<PlayerController>();
+        hitBy._isAttacking = true;
         if (hitBy.transform == _otherPlayer && hitBy._isAttacking)
         {
             if (!_isBlocking || hitBy.UpOrDown!=this.UpOrDown || hitBy.Dead)
             {
                 Die();
                 hitBy.Win();
+                hitBy._isAttacking = false;
                 Instantiate(ImpactPrefab, hit.position, Quaternion.identity);
             }
             
@@ -143,7 +145,7 @@ public class PlayerController : MonoBehaviour
         PlayerStart.nPLayers = 0;
         _playercount = 0;
         MovementController._playercount = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Title Screen");
     }
 
     public void Win()

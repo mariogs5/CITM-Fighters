@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Hollow Bastion.unity
+    guid: 0b9ec2d29bd0cac4e8e2c5357d0f18fe
+  - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: c97322fe2df893c4589bdb49a454922b
   m_configObjects: {}
